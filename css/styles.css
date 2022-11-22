@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #010101;
+    background-color: #f1f1f1;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.section-padding {
+    padding: 70px 0;
+}
+
+.metatrader4-accounts {
+    background-color: #f9faff;
+}
+
+.btn-link {
+    cursor: pointer;
+
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: #4080FF;
+    border: 1px solid transparent;
+    transform: translateY(0);
+    transition: all 0.3s ease-in;
+}
+
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active{
+    color: #4080FF;
+    background-color: transparent;
+    text-decoration: none;
+    transform: translateY(-10px);
+    border: 1px solid #4080FF;
+}
+
+.btn-green {
+    color: #fff;
+    background-color: #4CD7AB;
+}
+
+.btn-green:focus,
+.btn-green:hover,
+.btn-green:active {
+    color: #fff;
+    background-color: #c15151;
+    border: 1px solid #c15151;
+}
+
+.metatrader4-accounts__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 0;
+}
+
+.metatrader4-accounts__item {
+    overflow: hidden;
+    display: flex;
+    flex-basis: 260px;
+    flex-direction: column;
+
+    color: #1e1e1e;
+    padding: 24px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: none;
+    transform: translateY(0);
+    transition: all 0.3s ease-in;
+}
+
+.metatrader4-accounts__item:hover,
+.metatrader4-accounts__item:focus {
+    transform: translateY(-10px);
+    box-shadow: 30px 30px 39px rgba(206, 206, 206, 0.3);
+}
+
+.metatrader4-accounts__item-link {transform: translateY(70px);}
+
+.metatrader4-accounts__item:hover .metatrader4-accounts__item-link,
+.metatrader4-accounts__item:focus .metatrader4-accounts__item-link,
+.metatrader4-accounts__item:active .metatrader4-accounts__item-link{
+    transform: translateY(0)
+}
+
+.metatrader4-accounts__item-title {
+    font-size: clamp(1.25rem, calc(1.01rem + 1.22vw), 1.88rem);
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.metatrader4-accounts__item-description {
+    font-size: 0.938rem;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+.metatrader4-accounts__item-header {
+    margin-bottom: 30px;
+}
+
+.metatrader4-accounts__img-container {
+    flex-grow: 1;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.metatrader4-accounts__img {
+    filter: drop-shadow(14px 24px 30px rgba(137, 137, 137, 0.1));
+}
+
+.metatrader4-accounts__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 410px;
+    margin: 0 auto;
+}
+
+.metatrader4-accounts__links {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: underline;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 38px;
+    margin-bottom: 38px;
+}
+
+@media (max-width: 575.98px) {
+    .metatrader4-accounts__btn-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        gap: 10px;
+    }
+
+    .metatrader4-accounts__item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        grid-template-areas:
+        "metatrader4-accounts__item-header metatrader4-accounts__img-container";
+        gap: 15px;
+    }
+    
+    .metatrader4-accounts__item-header {grid-area: metatrader4-accounts__item-header;}
+    .metatrader4-accounts__img-container {grid-area: metatrader4-accounts__img-container;}
+
+    .metatrader4-accounts__item-link {
+        grid-column-end: span 2;
+        padding: 10px 30px;
+    }
+
+    .metatrader4-accounts__item-header,
+    .metatrader4-accounts__img-container{margin-bottom: 0;}
+
+    .metatrader4-accounts__item-link {transform: translateY(60px);}
+
+}
